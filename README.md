@@ -1,7 +1,6 @@
 
-Certainly! Below is an example README file tailored to the components you provided:
 
-React Components
+##React FLATIRON
 This repository contains a collection of React components for a simple transaction management application.
 
 Components

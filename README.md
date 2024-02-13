@@ -1,120 +1,54 @@
-## Components 
-1. Table component : Component to display my transcations 
-2. AddTransaction component : Display and capture user's input from a form 
-3. SearchBar component : display an input field that will capture the search term to filter the array. 
 
-## Relationships 
-APP (parent component) : responsible for maintainance of state and prop sharing -> Children (see components)
+Certainly! Below is an example README file tailored to the components you provided:
 
+React Components
+This repository contains a collection of React components for a simple transaction management application.
 
-### GITHUB COLLABORATION 
-1. Create your git repository on a platform(GitHub, GitLab, BitBucket)
-2. The scrum master invites the team members to the repository (collaboration settings from github.) 
-3. After consulting from team members , the scrum master creates the initial project template (project structure) and pushes to the repository either to the main or master branch. 
- - are we on the same version (node) if react :: opt for the latest. 
- - extra files or folders.
-4. Team members proceed to clone the repository. 
-5. Task allocation amongst the team members.  (React user interfaces)
-6. Once done with assigned task each member proceeds to create a branch in the repository. 
-        git checkout -b joseph-contact-component  (creation of a new branch)
+Components
+About: Displays information about the application.
+Contact: Provides contact information.
+Home: Main component displaying transaction data and forms.
+Navbar: Navigation component for easy access to different sections of the application.
+SearchBar: Allows users to search for transactions based on description.
+TransactionTable: Displays transaction data in a tabular format.
+AddTransactionForm: Form for adding new transactions.
+Usage
+To use these components in your React application, follow these steps:
 
-7. Each member after creation of branch should proceed to add and commit the changes then finally push to the branch(members branch)
-8. Then the scrum can proceed to merge the branches by following commands 
+Clone the repository:
 
-    - git checkout(switching to an existing branch) master or main 
-    (0nly do git pull origin branchname if you merged from platform)
-    ---- merging steps ----
-    - git fetch 
-    - git merge branchname 
-    - git status 
-    - git add .
-    - git commit -m " "
-    - git push to main origin. 
+bash
+Copy code
+git clone https://github.com/kelvinkuria/repeatchallenge
+Install dependencies:
 
+bash
+Copy code
+cd react-components
+npm install
+Import the desired components into your React application and use them according to your requirements.
 
+javascript
+Copy code
+import About from './About';
+import Contact from './Contact';
+import Home from './Home';
+import Navbar from './Navbar';
+import SearchBar from './SearchBar';
+import TransactionTable from './TransactionTable';
+import AddTransactionForm from './AddTransactionForm';
+Customize the components to fit your application's design and functionality.
 
-### VERCEL DEPLOYMENT
-vercel.com -> registering using github account.
-React
-1. Ensure there is a repository. 
-2. Import this repository to vercel. Follow steps on recording 
+Contributing
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
 
-Json-server
-1. Fork and clone this repository : https://github.com/kitloong/json-server-vercel
-2. Change db.json to your content 
-3. Push to your forked repository 
-4. Import this repository to vercel. Follow steps on recording
+Fork the repository.
+Create a new branch for your feature (git checkout -b feature-name).
+Make your changes.
+Commit your changes (git commit -am 'Add new feature').
+Push to the branch (git push origin feature-name).
+Create a new pull request.
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-
-### CLient Side Routing 
-Client side routing allows the app to update the URL on a link click without making a new request for another document from the server unlike traditional websites that would request documents from the web server for each new click event(Link acess)
-
-### React Router : Defacto routing lib. 
-this lib provides a declarative way to define routes and seamlessly manage navigation between different 
-components 
-Uses three main concepts to create a cohesive routing experience.
-- Router : Browser router will give access to all react router features in the app
-- Routes : Create the route links for our component  
-- Links 
-
-1. Improved Performance : eliminates full page reloads 
-2. Enhanced User Experience 
-3. Allows for code splitting and Lazy loading. 
-4. Route-based data fetching 
-
-
-Steps 
-1. Install react router dom 
-2. Import BrowserRouter from react-router-dom. Inside index.js wrap the top level component 
-3. In the main component create routes for the components you wish to have route links for.
-
-
-A,B,C,D,E   :::   A (value)(B)  ::  (B)(C) :: (C)(D) : (D)(E) :: E   :: I WANT VALUE FROM A TO REACH E
-
-components :: prop drilling 
-function A () {
-    const [x,setX] = useState('something like this')
-    return(
-        <>
-          <B propx={x}>
-        </>
-    )
-}
-
-
-function B ({propx}) {
-    return(
-        <>
-          <C propx={propx}>
-        </>
-    )
-}
-
-
-function C ({propx}) {
-    return(
-        <>
-          <D propx={propx}>
-        </>
-    )
-}
-
-function D ({propx}) {
-    return(
-        <>
-          <E propx={propx}>
-        </>
-    )
-}
-
-function E ({propx}) {
-    //this state is unique , 
-    const [x,setX] = useState('something like this')
-    return(
-        <>
-          <p>{propx}</p>
-        </>
-    )
-}
-
-React brings in the Context API accessed using the useContext hook to manage state globally. :: useContext()
+Feel free to customize the README file further based on your project's specific requirements and guidelines. This README serves as a starting point to help users understand and utilize the React components provided in this repository.
